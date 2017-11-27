@@ -36,5 +36,17 @@ var person2 = {
     lastname : "Doe"
 }
 
+//could have done the same thing with call
 console.log(person.getFullName.apply(person2));
 
+//function currying
+
+function multiply(a, b) {
+    return a * b;
+}
+
+var multiplyByTwo = multiply.bind(this,2);
+console.log(multiplyByTwo(25)); // multiplies the number by two
+
+var multiplyByThree = multiply.bind(this,3);
+console.log(multiplyByThree(25)); // multiplies the number by three
